@@ -1,0 +1,25 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+		function ktnt(n)
+			{
+				if (n<2) return 0;
+				if ((n==2)||(n==3)) return 1;
+				for (var i=2; i*i <= n; i+=1)	if (n%i==0) return 0;
+				return 1;
+			}
+		function nt(n, t)
+			{
+				if (n==0) document.write(t + ' không phải là số nguyên tố');
+				else document.write(t + ' là số nguyên tố');
+			}
+		//Test
+		nt(ktnt(7), 7);
+		document.write("<br>");
+		nt(ktnt(100), 100);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
