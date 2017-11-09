@@ -1,0 +1,28 @@
+<html lang="eng">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+		function pro(s)
+		{
+			s = ' ' + s;
+			var t = '';
+			var s1 = "abcdefghijklmnopqrstuvwxyz";
+			for (var i=1; i < s.length; i++)
+			{
+				if ((s1.indexOf(s[i]) != -1) && (s[i-1] == ' ')) 
+				t += s[i].toUpperCase(); else t += s[i];
+ 			}
+			return t;
+		}
+		</script>
+	</head>
+	<body>
+		Enter a string here:
+		<input type="text" id="txt1" />
+		<BR>
+		Your output here:
+		<input type="text" id="txt2" disabled="disabled" />
+		<BR>
+		<input type="button" value="Process" onclick="document.getElementById('txt2').value = pro(document.getElementById('txt1').value)" />
+	</body>
+</html>

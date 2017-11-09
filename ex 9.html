@@ -1,0 +1,36 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function pro(n)
+			{
+				var spl = n.split("/");
+				if (spl.length != 3) 
+				{
+					alert("Date is invalid");
+				}
+				else
+				{
+					var chk = 0;
+					if (spl[2] >= 0) chk++;
+					if ((spl[1] > 0) && (spl[1] < 13)) chk++;
+					if ((spl[1] == 1)||(spl[1] == 3)||(spl[1] == 5)||(spl[1] == 7)||(spl[1] == 8)||(spl[1] == 10)||(spl[1] == 12))
+					if ((0 < spl[0]) && (spl[0] <= 31)) chk++;
+					if ((spl[1] == 4)||(spl[1] == 6)||(spl[1] == 9)||(spl[1] == 11))
+					if ((0 < spl[0]) && (spl[0] < 31)) chk++;
+					if ((spl[1] == 2)&&(spl[1] % 4==0)&&(0 < spl[0]) && (spl[0] < 30)) chk++;
+					if ((spl[1] == 2)&&(spl[1] % 4 != 0)&&(0 < spl[0]) && (spl[0] < 29)) chk++;
+					if (chk==3) alert("Date is valid");
+					else alert("Date is invalid");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		Enter date type(dd/mm/yyyy):
+		<input type="text" id="txt1" />
+		<input type="button" value="Process" onclick="pro(document.getElementById('txt1').value)" />
+	</body>
+</html>
+		
+		

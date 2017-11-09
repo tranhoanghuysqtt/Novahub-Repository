@@ -1,0 +1,34 @@
+<html lang="eng">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+		
+    	function pro(s1, s2, s3)	
+			{	
+				s1 = ' ' + s1;
+				s1 += ' ';
+				s2 = ' ' + s2;
+				s2 += ' ';
+				s3 = ' ' + s3;
+				s3 += ' ';
+				while (s1.indexOf(s2) != -1) s1 = s1.replace(s2, s3);
+				return(s1);
+			}
+		</script>
+	</head>
+	<body>
+		Enter input 1:
+		<input type="text" id="txt1">
+		<BR>
+		Enter input 2:
+		<input type="text" id="txt2">
+		<BR>
+		Enter input 3:
+		<input type="text" id="txt3">
+		<BR>
+		Output here:
+		<input type="text" id="txt4" disabled="disabled">
+		<BR>
+		<input type="button" value="Process" onclick="document.getElementById('txt4').value = pro(document.getElementById('txt1').value, document.getElementById('txt2').value, document.getElementById('txt3').value)">
+	</body>
+</html>

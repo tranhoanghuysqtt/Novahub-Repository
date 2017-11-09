@@ -1,0 +1,21 @@
+<html lang="en">
+	<head charset="utf-8">
+	<script type="text/javascript">
+		function pro(a)
+		{
+			var s = '';
+			for (var i= a.length - 1; i>=0; i--)	s += a[i];
+			return(s);
+		}
+	</script>	
+	</head>
+	<body>
+		Enter input :
+		<input type="text" id="txt1" />
+		<BR>
+		Output here:
+		<input type="text" id="txt2" disabled="disabled" />
+		<BR>
+		<input type="button" value="Process" onclick="document.getElementById('txt2').value = pro(document.getElementById('txt1').value)"/>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function pro(s)
+			{
+				var spl = s.split(" ");
+				var res = [];
+				for (var i=0; i<spl.length; i++) res[i] = spl[i] * spl[i]; 
+				alert(res.valueOf());
+			}
+		</script>
+	</head>
+	<body>
+		Enter array here:
+		<input type="text" id="txt1"/>
+		<BR>
+		<input type="button" value="Process" onclick="pro(document.getElementById('txt1').value)"/>
+	</body>
+</html>

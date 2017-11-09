@@ -1,0 +1,32 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function pro(s, n)
+				{
+					var spl = s.split(" ");
+					spl.splice(n,1);
+					alert(spl.valueOf());
+				}
+			function pro2(s,n,m)
+				{
+					var spl = s.split(" ");
+					spl.splice(n,0, m);
+					alert(spl.valueOf());
+				}
+		</script>
+	</head>
+	<body>
+		Enter array here       :
+		<input type="text" id="txt1"/>
+		<BR>
+		Enter number n here    :
+		<input type="text" id="txt2"/>
+		<BR>
+		Enter number you insert:
+		<input type="text" id="txt3"/>
+		<BR>
+		<input type="button" value="Insert" onclick="pro2(document.getElementById('txt1').value, document.getElementById('txt2').value, document.getElementById('txt3').value);"/>
+		<input type="button" value="Delelte" onclick="pro(document.getElementById('txt1').value, document.getElementById('txt2').value) "/>
+	</body>
+</html>

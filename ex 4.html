@@ -1,0 +1,26 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			function pro(n, s)
+			{
+				var spl = s.split(" ");
+				var res = spl[0];
+				for (var i=1; i<n; i++) res = Math.max(res, spl[i]);
+				return res;
+			}
+		</script>
+	</head>
+	<body>
+		Enter n here: 
+		<input type="text" id="txt1" />
+		<BR>
+		Enter your array here: 
+		<input type="text" id="txt2" />
+		<BR>
+		Your max element here:
+		<input type="text" id="txt3" disabled="disabled" />
+		<BR>
+		<input type="button" value="Process" onclick="document.getElementById('txt3').value = pro(document.getElementById('txt1').value, document.getElementById('txt2').value)" />
+	</body>
+</html>
