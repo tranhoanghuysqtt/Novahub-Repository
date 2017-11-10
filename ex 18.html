@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			
+			var openFile = function(event) 
+			{
+				var input = event.target;
+				var reader = new FileReader();
+				reader.onload = function()
+				{
+					var text = reader.result;
+					//document.write(text);
+					document.getElementById('txt').value = text;
+				}
+				reader.readAsText(input.files[0]);
+			}
+		 </script>
+	</head>
+	<body>
+		Select a File to Load:
+		<input type='file' accept='text/plain' onchange='openFile(event)'/>
+		<br>
+		<textarea id="txt" disabled="disabled" style="width:512px;height:256px"></textarea>
+		
+	</table>
+	</body>
+</html>
