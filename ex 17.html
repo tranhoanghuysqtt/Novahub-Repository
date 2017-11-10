@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<input type='file' accept='text/plain' onchange='openFile(event)'><br>
+		<img id='output'>
+		<script>
+		  var openFile = function(event) 
+			{
+				var input = event.target;
+				var reader = new FileReader();
+				reader.onload = function(){
+				var text = reader.result;
+				var res = text.split(",");
+				var sum=0;
+				for(var i=0; i<res.length; i++) sum+= (res[i]++);
+				document.write(sum);
+			}
+			reader.readAsText(input.files[0]);
+		  }
+		</script>
+	<body>
+</html>
